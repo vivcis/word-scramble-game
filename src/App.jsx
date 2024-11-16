@@ -94,6 +94,9 @@ function App() {
           value={guess}
           onChange={(e) => setGuess(e.target.value)}
           placeholder="Your guess"
+          onKeyPress={(e) => {
+            if (e.key === "Enter") checkGuess();
+          }}
         />
         <button onClick={checkGuess}>Submit</button>
       </div>
@@ -102,7 +105,17 @@ function App() {
         <button onClick={loadNewWord}>Skip Word</button>
       </div>
       {showHint && <p className="hint">Hint: {hint}</p>}
-      <p className="feedback">{feedback}</p>
+      <p
+        className={`feedback ${
+          feedback.includes("Correct")
+            ? "correct"
+            : feedback.includes("Incorrect")
+            ? "incorrect"
+            : ""
+        }`}
+      >
+        {feedback}
+      </p>
       <div className="status">
         <p>Score: {score}</p>
         <p>Time Left: {timeLeft} seconds</p>
