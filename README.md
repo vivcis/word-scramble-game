@@ -29,3 +29,27 @@ A simple word scramble game built with React.js and Vite.
 
    ```bash
    git clone https://github.com/vivcis/word-scramble-game.git
+
+## Run
+
+2. **Install dependencies**:
+
+   ```bash
+   npm install
+
+3. **Run**:
+
+   ```bash
+   npm run dev
+
+## Test
+
+4. **Run the test**:
+
+   ```bash
+   npm run test
+
+## Live link
+
+   ```bash
+   https://word-scramble-game-topaz.vercel.app/
